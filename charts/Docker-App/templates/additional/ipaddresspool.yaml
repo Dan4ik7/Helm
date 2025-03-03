@@ -1,0 +1,12 @@
+{{- if .Values.resources.enable }}
+  {{- if .Values.resources.Infrastructure.LoadBalancer.Type.metallb.Configuration.L2Configuration.enable }}
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: {{ include "common.names.fullname" . }}-pool
+  namespace: {{ default "default" .Values.resources.Infrastructure.LoadBalancer.Type.metallb.namespace }}
+spec:
+  addresses:
+{{ .Values.resources.Infrastructure.LoadBalancer.Type.metallb.Configuration.L2Configuration.addresses | toYaml | indent 4 }}
+  {{- end }}
+{{- end }}

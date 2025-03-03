@@ -1,0 +1,12 @@
+{{- if .Values.resources.enable }}
+  {{- if .Values.resources.Infrastructure.LoadBalancer.Type.metallb.Configuration.L2Configuration.enable }}
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: {{ include "common.names.fullname" . }}
+  namespace: {{ default "default" .Values.resources.Infrastructure.LoadBalancer.Type.metallb.namespace }}
+spec:
+  ipAddressPools:
+  - {{ include "common.names.fullname" . }}-pool
+  {{- end }}
+{{- end }}
