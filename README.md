@@ -14,7 +14,7 @@ The Docker workshop for getting started:
 
 This repo includes the Docker app which is a helm chart that deploys the app in kubernetes
 
-###Pre-requisities
+### Pre-requisities
 
 - Kubernetes 1.23+
 - Helm 3.8.0+
