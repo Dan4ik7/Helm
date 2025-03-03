@@ -20,7 +20,7 @@ the latest versions of the packages.  You can then run `helm search repo
 
 To install the Helm chart:
 
-    helm install my-release Helm/Docker-App
+    helm install my-release Helm/docker-app
 
 To uninstall the chart:
 
