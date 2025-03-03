@@ -2,7 +2,7 @@
 
 This Repo includes Helm Chrats made specific for learning scope in order to master Helm. 
 
-##Before you begin
+## Before you begin
 
 # One Chart Example
 
