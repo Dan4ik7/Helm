@@ -16,8 +16,8 @@ This repo includes the Docker app which is a helm chart that deploys the app in 
 
 ### Pre-requisities
 
-- Kubernetes 1.23+
-- Helm 3.8.0+
+- [Kubernetes 1.23+](https://kubernetes.io/releases/)
+- [Helm 3.8.0+](https://helm.sh/docs/)
 - [LoadBalancer](https://metallb.universe.tf/installation/) like metallb
 - [Nginx](https://docs.nginx.com/nginx-ingress-controller/installation/installing-nic/installation-with-helm/) ingress controller 
 
