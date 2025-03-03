@@ -4,7 +4,7 @@ This Repo includes Helm Chrats made specific for learning scope in order to mast
 
 ## Before you begin
 
-# One Chart Example
+### One Chart Example
 
 The Docker workshop for getting started: 
 - [Docker Workshop](https://docs.docker.com/get-started/)
