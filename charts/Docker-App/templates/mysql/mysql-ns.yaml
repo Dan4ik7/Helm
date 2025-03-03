@@ -1,9 +1,0 @@
-{{- if  .Values.mysql.namespace -}}
-apiVersion: v1
-kind: Namespace
-metadata:
-  creationTimestamp: null
-  name: {{ .Values.mysql.namespace }}
-spec: {}
-status: {}
-{{- end }}

@@ -1,9 +1,0 @@
-{{- if  .Values.docker.namespace -}}
-apiVersion: v1
-kind: Namespace
-metadata:
-  creationTimestamp: null
-  name: {{ .Values.docker.namespace }}
-spec: {}
-status: {}
-{{- end }}
