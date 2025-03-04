@@ -24,7 +24,7 @@ jobs:
       - name: Set execute permissions for cr.sh
         run: chmod +x .github/actions/oci-releaser/cr.sh
   
-      - name: Run OCI Chart Releaser
+      - name: Run OCI Chart Releaser from local
         uses: ./.github/actions/oci-releaser
         with:
             oci_registry: registry-1.docker.io/${{ vars.DOCKERHUB_USERNAME }}
