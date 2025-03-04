@@ -29,4 +29,3 @@ jobs:
             oci_username: ${{ vars.DOCKERHUB_USERNAME }}
             oci_password: ${{ secrets.DOCKER_HUB }}
             github_token:  ${{ secrets.HELM_TOKEN_RELEASE }}
-            skip_upload: true
