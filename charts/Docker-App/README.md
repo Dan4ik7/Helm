@@ -10,7 +10,7 @@ The Application is provided by docker workshop:
 [Helm](https://helm.sh) must be installed to use the charts.  Please refer to
 Helm's [documentation](https://helm.sh/docs) to get started.
 
-# github release
+### github release
 
 Once Helm has been set up correctly, add the repo as follows:
 
@@ -28,7 +28,7 @@ To uninstall the chart:
 
     helm delete demo
     
-# oci release 
+### oci release 
 
 Once Helm has been set up correctly, add the repo as follows:
 
