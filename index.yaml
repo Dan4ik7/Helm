@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  docker-app:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-03-04T16:02:21.37279055Z"
+    description: A docker app for kubernetes
+    digest: 01b3721288b1779532ee88136b4b95f8c7c042d3d9d5a3694e93a48832b0c94c
+    name: docker-app
+    type: application
+    urls:
+    - https://github.com/Dan4ik7/Helm/releases/download/docker-app-0.1.0/docker-app-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-04T16:02:21.372806099Z"
