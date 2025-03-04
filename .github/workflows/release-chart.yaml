@@ -28,6 +28,6 @@ jobs:
             oci_registry: registry-1.docker.io/${{ vars.DOCKERHUB_USERNAME }}
             oci_username: ${{ vars.DOCKERHUB_USERNAME }}
             oci_password: ${{ secrets.DOCKER_HUB }}
-            github_token: ""
+            github_token:  ${{ secrets.HELM_TOKEN_RELEASE }}
 
 
