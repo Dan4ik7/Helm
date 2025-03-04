@@ -20,11 +20,6 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.6.0
-        env:
-          CR_TOKEN: "${{ secrets.HELM_TOKEN_RELEASE }}"
           
       - name: Set execute permissions for cr.sh
         run: chmod +x .github/actions/oci-releaser/cr.sh
@@ -37,3 +32,8 @@ jobs:
             oci_password: ${{ secrets.DOCKER_HUB }}
             github_token:  ${{ secrets.HELM_TOKEN_RELEASE }}
             skip_gh_release: true 
+            
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        env:
+          CR_TOKEN: "${{ secrets.HELM_TOKEN_RELEASE }}"
