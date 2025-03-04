@@ -31,14 +31,7 @@ jobs:
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-
-      - name: Debug Secrets and Environment
-        run: |
-          echo "OCI Registry: ${{ secrets.DOCKER_HUB }}"
-          echo "GitHub Token Length: $(echo -n "${{ secrets.HELM_TOKEN_RELEASE }}" | wc -c)"
-          echo "Checking if OCI registry is accessible..."
-          curl -v https://registry-1.docker.io/v2/    
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"  
 
       - name: Run OCI Chart Releaser
         uses: bitdeps/helm-oci-charts-releaser@v0.1.3
