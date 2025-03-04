@@ -5,10 +5,12 @@ The Application is provided by docker workshop:
 
 - [Docker-workshop](https://docs.docker.com/get-started/workshop/08_using_compose/)
 
-## Usage
+## Usage  
 
 [Helm](https://helm.sh) must be installed to use the charts.  Please refer to
 Helm's [documentation](https://helm.sh/docs) to get started.
+
+# github release
 
 Once Helm has been set up correctly, add the repo as follows:
 
@@ -25,3 +27,15 @@ To install the Helm chart:
 To uninstall the chart:
 
     helm delete demo
+    
+# oci release 
+
+Once Helm has been set up correctly, add the repo as follows:
+
+    helm install demo oci://registry-1.docker.io/mirondaniel7/docker-app
+
+To uninstall the chart:
+
+    helm delete demo
+
+    
