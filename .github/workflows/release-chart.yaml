@@ -13,7 +13,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -29,5 +29,4 @@ jobs:
             oci_username: ${{ vars.DOCKERHUB_USERNAME }}
             oci_password: ${{ secrets.DOCKER_HUB }}
             github_token:  ${{ secrets.HELM_TOKEN_RELEASE }}
-
-
+            skip_gh_release: true 
