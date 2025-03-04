@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release:
+  github_release:
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -26,12 +26,30 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.HELM_TOKEN_RELEASE }}"
           
+
+            
+  oci_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
       - name: Debug Secrets and Environment
         run: |
           echo "OCI Registry: ${{ secrets.DOCKER_HUB }}"
           echo "GitHub Token Length: $(echo -n "${{ secrets.HELM_TOKEN_RELEASE }}" | wc -c)"
           echo "Checking if OCI registry is accessible..."
-          curl -v https://registry-1.docker.io/v2/
+          curl -v https://registry-1.docker.io/v2/    
 
       - name: Run OCI Chart Releaser
         uses: bitdeps/helm-oci-charts-releaser@v0.1.3
@@ -39,4 +57,4 @@ jobs:
             oci_registry: registry-1.docker.io/mirondaniel7
             oci_username: mirondaniel7
             oci_password: ${{ secrets.DOCKER_HUB }}
-            github_token: ${{ secrets.HELM_TOKEN_RELEASE }}
+            github_token: ${{ secrets.HELM_TOKEN_RELEASE }}        
