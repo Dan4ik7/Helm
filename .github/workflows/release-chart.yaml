@@ -17,6 +17,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB }}
           
   oci_release:
+    needs: login
     runs-on: ubuntu-latest
     permissions:
       contents: write
