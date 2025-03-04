@@ -64,7 +64,7 @@ main() {
   local skip_oci_login=false
   local mark_as_latest=true
   local tag_name_pattern=
-  local skip_gh_release
+  local skip_gh_release=
   local repo_root=
 
   parse_command_line "$@"
